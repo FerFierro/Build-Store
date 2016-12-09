@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 17/05/2014 11:00:02 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Pojos.Comentarios" table="comentarios" catalog="constructora">
+        <id name="idComentarios" type="java.lang.Integer">
+            <column name="idComentarios" />
+            <generator class="identity" />
+        </id>
+        <property name="fechaComentario" type="timestamp">
+            <column name="fechaComentario" length="19" not-null="true" />
+        </property>
+        <property name="estatusComentarios" type="boolean">
+            <column name="estatusComentarios" not-null="true" />
+        </property>
+        <property name="comentario" type="string">
+            <column name="Comentario" length="100" />
+        </property>
+        <set name="usuarios" inverse="false" table="usuario_comentario">
+            <key>
+                <column name="Comentarios_idComentarios" not-null="true" />
+            </key>
+            <many-to-many entity-name="Pojos.Usuario">
+                <column name="Usuario_idUsuario" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="proyectoconstructoras" inverse="false" table="proyectoc_comentario">
+            <key>
+                <column name="Comentarios_idComentarios" not-null="true" />
+            </key>
+            <many-to-many entity-name="Pojos.Proyectoconstructora">
+                <column name="ProyectoConstructora_idProyectoConstructora" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="constructora"/>
+  <table-filter match-name="proyecto"/>
+  <table-filter match-name="constructora_tipo_proyecto"/>
+  <table-filter match-name="servicio"/>
+  <table-filter match-name="servicio_contratado"/>
+  <table-filter match-name="tipo_proyecto"/>
+  <table-filter match-name="cliente"/>
+  <table-filter match-name="servicio_propuesto"/>
+  <table-filter match-name="comentario"/>
+  <table-filter match-name="constructora"/>
+</hibernate-reverse-engineering>

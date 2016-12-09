@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 22/05/2014 02:26:37 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Pojos.ServicioContratado" table="servicio_contratado" catalog="constructora">
+        <id name="idServicioContratado" type="java.lang.Integer">
+            <column name="id_servicio_contratado" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="50" not-null="true" />
+        </property>
+        <property name="costo" type="java.lang.Integer">
+            <column name="costo" />
+        </property>
+        <property name="fechaContratacion" type="timestamp">
+            <column name="fecha_contratacion" length="19" />
+        </property>
+        <property name="idProyecto" type="java.lang.Integer">
+            <column name="id_proyecto" />
+        </property>
+        <property name="nota" type="string">
+            <column name="nota" length="65535" />
+        </property>
+    </class>
+</hibernate-mapping>

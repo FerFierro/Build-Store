@@ -1,0 +1,4 @@
+17/05/2014 -- 11:42 -- lo que he hecho del proyecto hasta el momento fue configurar netbeans crear una conexion 
+a la base de datos y esta empezando a hacer lo que decia el video que te pase https://www.youtube.com/watch?v=ZGtMucor78Q 
+ese es el link del otro video que estaba viendo por si tienes mas dudas si haces algun cambio porfa dime por aqui en que 
+archivo.

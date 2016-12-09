@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 22/05/2014 02:26:37 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Pojos.ConstructoraTipoProyecto" table="constructora_tipo_proyecto" catalog="constructora">
+        <id name="idConstructoraTipoProyecto" type="java.lang.Integer">
+            <column name="id_constructora_tipo_proyecto" />
+            <generator class="identity" />
+        </id>
+        <property name="idConstructora" type="int">
+            <column name="id_constructora" not-null="true" />
+        </property>
+        <property name="idTipoProyecto" type="int">
+            <column name="id_tipo_proyecto" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

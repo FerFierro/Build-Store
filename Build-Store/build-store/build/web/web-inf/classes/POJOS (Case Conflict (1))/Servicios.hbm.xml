@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 17/05/2014 11:00:02 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Pojos.Servicios" table="servicios" catalog="constructora">
+        <id name="idServicios" type="int">
+            <column name="idServicios" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombreServicio" type="string">
+            <column name="nombreServicio" length="45" />
+        </property>
+        <property name="costoServicio" type="string">
+            <column name="costoServicio" length="45" />
+        </property>
+        <property name="descripcionServicio" type="string">
+            <column name="descripcionServicio" length="45" />
+        </property>
+        <property name="tipoServicio" type="string">
+            <column name="tipoServicio" length="45" />
+        </property>
+        <set name="constructoras" inverse="false" table="servicios_constructora">
+            <key>
+                <column name="Servicios_idServicios" not-null="true" />
+            </key>
+            <many-to-many entity-name="Pojos.Constructora">
+                <column name="Constructora_idConstructora" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

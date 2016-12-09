@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 22/05/2014 02:26:37 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Pojos.Proyecto" table="proyecto" catalog="constructora">
+        <id name="idProyecto" type="java.lang.Integer">
+            <column name="id_proyecto" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="100" not-null="true" />
+        </property>
+        <property name="idCliente" type="int">
+            <column name="id_cliente" not-null="true" />
+        </property>
+        <property name="fechaInicio" type="timestamp">
+            <column name="fecha_inicio" length="19" not-null="true" />
+        </property>
+        <property name="fechaTermino" type="timestamp">
+            <column name="fecha_termino" length="19" not-null="true" />
+        </property>
+        <property name="estatus" type="string">
+            <column name="estatus" length="50" not-null="true" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="descripcion" length="65535" not-null="true" />
+        </property>
+        <property name="idConstructoraTipoProyecto" type="int">
+            <column name="id_constructora_tipo_proyecto" not-null="true" />
+        </property>
+        <property name="ranking" type="java.lang.Integer">
+            <column name="ranking" />
+        </property>
+        <property name="fotografia" type="string">
+            <column name="fotografia" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

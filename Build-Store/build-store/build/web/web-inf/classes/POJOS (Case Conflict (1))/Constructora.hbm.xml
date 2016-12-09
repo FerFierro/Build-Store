@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 17/05/2014 11:00:02 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Pojos.Constructora" table="constructora" catalog="constructora">
+        <id name="idConstructora" type="java.lang.Integer">
+            <column name="idConstructora" />
+            <generator class="identity" />
+        </id>
+        <property name="contrasena" type="string">
+            <column name="contrasena" length="10" not-null="true" />
+        </property>
+        <property name="nombreConstructora" type="string">
+            <column name="nombreConstructora" length="45" not-null="true" />
+        </property>
+        <property name="descripcionConstructora" type="string">
+            <column name="descripcionConstructora" length="200" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="45" not-null="true" />
+        </property>
+        <property name="telefono" type="string">
+            <column name="telefono" length="45" not-null="true" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="direccion" length="100" not-null="true" />
+        </property>
+        <property name="logotipo" type="string">
+            <column name="logotipo" length="45" not-null="true" />
+        </property>
+        <set name="proyectoconstructoras" inverse="false" table="constructora_proycon">
+            <key>
+                <column name="Constructora_idConstructora" not-null="true" />
+            </key>
+            <many-to-many entity-name="Pojos.Proyectoconstructora">
+                <column name="ProyectoConstructora_idProyectoConstructora" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="servicioses" inverse="false" table="servicios_constructora">
+            <key>
+                <column name="Constructora_idConstructora" not-null="true" />
+            </key>
+            <many-to-many entity-name="Pojos.Servicios">
+                <column name="Servicios_idServicios" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>
